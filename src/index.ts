@@ -1,3 +1,13 @@
 import { logger } from 'juno-js';
 
-logger.info('Chao Xìn 🇻🇳');
+import { createApp } from './app';
+
+const main = () => {
+  try {
+    createApp();
+  } catch (error) {
+    logger.error('Global error 🐛');
+  }
+};
+
+main();

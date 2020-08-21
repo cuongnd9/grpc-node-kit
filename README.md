@@ -1,3 +1,3 @@
-# typescript-template
+# grpc-kit
 
-🌱 TypeScript template
+A gRPC KIT 🧧 for Node.
