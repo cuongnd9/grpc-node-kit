@@ -15,7 +15,7 @@ const main = async () => {
     associate();
     createApp();
   } catch (error) {
-    logger.error('Global error 🐛');
+    logger.error('Global error 🐛', error);
   }
 };
 
