@@ -20,15 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7dc9c44-d1da-4153-b83b-c1469196d9f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/build-proto.sh.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protos/cat.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/build-proto.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/build-proto.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protos/cat_grpc_pb.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protos/cat_grpc_pb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protos/cat_pb.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protos/cat_pb.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +71,7 @@
       <updated>1597915856501</updated>
       <workItem from="1597915857735" duration="973000" />
       <workItem from="1597931088944" duration="6295000" />
+      <workItem from="1598109847717" duration="15000" />
     </task>
     <servers />
   </component>
@@ -89,6 +88,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="102" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597944009401">
