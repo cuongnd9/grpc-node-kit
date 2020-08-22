@@ -26,8 +26,10 @@
   },
   "dependencies": {
     "@grpc/grpc-js": "^1.1.4",
+    "@grpc/proto-loader": "^0.5.5",
     "diana-js": "^0.7.0",
     "google-protobuf": "^3.13.0",
+    "hades-ts": "^0.1.0",
     "hera-js": "^0.4.0",
     "juno-js": "^0.1.1",
     "lodash": "^4.17.20",
