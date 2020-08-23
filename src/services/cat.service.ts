@@ -1,7 +1,9 @@
 import * as grpc from '@grpc/grpc-js';
+import { omit } from 'lodash';
 
-import { CatServiceService, ICatServiceServer } from '../protos/cat_grpc_pb';
+import * as cat_grpc_pb from '../protos/cat_grpc_pb';
 import * as cat_pb from '../protos/cat_pb';
+import { ICatServiceServer } from '../protos/cat_grpc_pb';
 import sequelize from '../models';
 import CatModel from '../models/cat.model';
 
@@ -26,7 +28,7 @@ class CatHandler implements ICatServiceServer {
         id,
       },
     });
-    const res = new cat_pb.CreateResponse();
+    const res = new cat_pb.ReadResponse();
     const catResponse = new cat_pb.Cat();
     catResponse.setId(cat.id);
     catResponse.setName(cat.name);
@@ -36,7 +38,7 @@ class CatHandler implements ICatServiceServer {
   }
 
   create: grpc.handleUnaryCall<cat_pb.CreateRequest, cat_pb.CreateResponse> = async (call, callback) => {
-    const newCat = await sequelize.transaction((transaction) => CatModel.create(call.request.toObject(), {
+    const newCat = await sequelize.transaction((transaction) => CatModel.create(omit(call.request.toObject().cat, 'id'), {
       transaction,
     }));
     const res = new cat_pb.CreateResponse();
@@ -49,7 +51,7 @@ class CatHandler implements ICatServiceServer {
   }
 
   update: grpc.handleUnaryCall<cat_pb.UpdateRequest, cat_pb.UpdateResponse> = async (call, callback) => {
-    const { id, ...updatedData } = call.request.toObject() as any;
+    const { id, ...updatedData } = call.request.toObject().cat as any;
     const [, [updatedCat]] = await sequelize.transaction((transaction) => CatModel.update(updatedData, {
       where: {
         id,
@@ -80,6 +82,7 @@ class CatHandler implements ICatServiceServer {
 }
 
 export default {
-  service: CatServiceService,
+  // @ts-ignore
+  service: cat_grpc_pb['v1.CatService'],
   handler: new CatHandler(),
 };
